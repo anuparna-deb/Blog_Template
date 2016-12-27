@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Sara's Dish</title>
+	 <link rel="icon" href="#" type="image/x-icon">
+    <!-- For mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For bootstrap, css, js and handlebars -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/handlebars-v3.0.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- For Social Icons -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- For Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Sriracha" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rosarivo" rel="stylesheet"> 
+	<!-- For external stylesheets -->
+	<link href="css/main_style.css" rel="stylesheet">
+	<link href="css/home_style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="nav">
+		</div>
+		<div id="banner">
+		</div>
+		<div id="about">
+		</div>
+		<div id="sub1">
+		</div>
+		<div id="sub2">
+		</div>
+		<div id="footer">
+			<br><br>
+			<center>
+			<h4>Copyright 2016 - All rights Reserved</h4>
+			</center>
+			<br><br>
+		</div>
+	</div>
+	<!-- Navbar Template -->
+	<script id="navbar-template" type="text/x-handlebars-template">
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="home.html"><h4>{{name}}</h4></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="active_now"><a href="{{src_option1}}"><h4>{{option1}}</h4></a></li>
+						<li><a href="{{src_option2}}"><h4>{{option2}}</h4></a></li>
+						<li><a href="{{src_option3}}"><h4>{{option3}}</h4></a></li>
+						<li><a href="{{src_option4}}"><h4>{{option4}}</h4></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<br><br><br>
+	</script>
+	
+	<!-- Banner Template -->
+	<script id="banner-template" type="text/x-handlebars-template">
+		<img src="{{banner_src}}" alt="" width="100%" height="" />
+		<h1 class="header">{{heading}}</h1>
+		<h3 class="subheader">{{subheading}}</h3>
+		<br><br><br><br>
+	</script>
+	
+	<!-- About Template -->
+	<script id="about-template" type="text/x-handlebars-template">
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-3">
+				<center>
+				 <img src="{{about_src}}" class="img-circle" alt="Cinque Terre" width="304" height="304">
+				 <center>
+			</div>
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-6">
+				<h2 class="abt-header">{{about_heading}}</h2>
+				<h4 class="abt-subheader">{{about_subheading}}</h4>
+				<br>
+				<br><br>
+				<center>
+					<a href="about.html"><button name="about" >{{about_btn}}</button></a>
+				</center>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<br><br><br><br>
+		<br><br><br><br>
+	</script>
+	
+	<!-- sub1 template -->
+	<script id="sub1-template" type="text/x-handlebars-template">
+		<img src="{{sub1_src}}" alt="" width="100%" height="" />
+		<center>
+		<div style="margin-top:-750px;">
+			<div id="recipe1"  class="recipe">
+				<img src="{{recipe1_src}}" alt="salad" height="250px" width="350px" />
+				<h5> RECIPE </h5>
+				<br>
+				<h1 class="topic">{{recipe1_topic}}</h1>
+				<br><br>
+				<a href="#"><button name="recipe">Read More</button></a>
+			</div>
+			<div id="recipe2"  class="recipe">
+				<img src="{{recipe2_src}}" alt="salad" height="250px" width="350px" />
+				<h5> RECIPE </h5>
+				<br>
+				<h1 class="topic">{{recipe2_topic}}</h1>
+				<br><br>
+				<a href="#"><button name="recipe">Read More</button></a>
+			</div>
+			<div id="recipe3"  class="recipe">
+				<img src="{{recipe3_src}}" alt="salad" height="250px" width="350px" />
+				<h5> RECIPE </h5>
+				<br>
+				<h1 class="topic">{{recipe3_topic}}</h1>
+				<br><br>
+				<a href="#"><button name="recipe">Read More</button></a>
+			</div>
+		</center>
+		</div>
+		<center>
+			<br><br><br><br><br>
+			<a href="#"><button name="blog" id="blog">Continue To Blog</button></a>
+		</center>
+	</script>
+	
+	<!-- Sub2 Template -->
+	<script id="sub2-template" type="text/x-handlebars-template">
+		<br><br><br><br>
+		<br><br><br><br>
+		<center><h1 class="topic" style="font-size:45px;">{{sub2_heading}}</h1></center>
+		<br><br><br><br>
+		<div class="popular_recipes">
+			<center>
+			{{#each images}}
+				<div class="sub_recipes">
+					<img src="{{img_src}}" alt="food" width="550px" height="200px" />
+					<br><br>
+					<center>
+					<h1 class="topic">{{img_topic}}</h1>
+					<br><br>
+					<a href="{{recipe_src}}"><p>View Recipes>></p></a>
+					</center>
+				</div>
+			{{/each}}
+			</center>
+		</div>
+		<br><br><br><br>
+	</script>
+	
+</body>
+<script type="text/javascript">
+	/* Navbar template */
+	var nav_info = document.getElementById("navbar-template").innerHTML;
+	var template = Handlebars.compile(nav_info);
+	var nav_data = template({name: "SARA'S DISH", 
+							option1: "HOME", src_option1: "home.html", 
+							option2: "ABOUT", src_option2: "about.html",
+							option3: "BLOG", src_option3: "blog.html",
+							option4: "CONTACT", src_option4: "contact.html",
+							});
+	document.getElementById("nav").innerHTML += nav_data;
+	
+	/* banner template */
+	var banner_info = document.getElementById("banner-template").innerHTML;
+	var template = Handlebars.compile(banner_info);
+	var banner_data = template({banner_src: "food_bk2.jpg",
+								heading: "Delicious",
+								subheading: "Home Made Recipes"
+								});
+	document.getElementById("banner").innerHTML += banner_data;
+	
+	/* about template */
+	var about_info = document.getElementById("about-template").innerHTML;
+	var template = Handlebars.compile(about_info);
+	var about_data = template({about_src: "http://www.cole.jp/sites/default/files/cole-people-first-woman-left.jpg",
+								about_heading: "Hi there! Nice to meet you!",
+								about_subheading: "I'm Sara - a food enthusiast and full-time blogger. Lorem Ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua aliquip laboris nisi ut aliquip.Lorem Ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor inciddunt ut labore et dolore magna aliqua aliquip laboris nisi ut aliquip!",
+								about_btn: "Learn More"
+							});
+	document.getElementById("about").innerHTML += about_data;
+	
+	/* sub1 template */
+	var sub1_info = document.getElementById("sub1-template").innerHTML;
+	var template = Handlebars.compile(sub1_info);
+	var sub1_data = template({sub1_src: "https://s-media-cache-ak0.pinimg.com/originals/bf/2f/9b/bf2f9b32ef19a990c957e524a5cfa472.jpg",
+							  recipe1_src: "https://s3.amazonaws.com/cos-cdn2/McAlisters/Images+for+menu+7.24/McAlisters-Product-Images_ENTREE-SALADS_Grilled-Chicken.png",
+							  recipe1_topic: "Grilled Chicken Salad",
+							  recipe2_src: "https://fitisafeministissue.files.wordpress.com/2015/03/healthy-salad-tip.jpg",
+							  recipe2_topic: "Spicy Tuscon Salad",
+							  recipe3_src: "http://www.onceuponachef.com/images/2015/07/Caprese-Salad-with-Olive-Oil-Balsamic-Glaze-1024x812.jpg",
+							  recipe3_topic: "Caprese Olive Salad"
+							});
+	document.getElementById("sub1").innerHTML += sub1_data;
+	
+	/* sub2 template */
+	var sub2_info = document.getElementById("sub2-template").innerHTML;
+	var template = Handlebars.compile(sub2_info);
+	var sub2_data = template({sub2_heading: "Popular Recipe Collection",
+							  images:[{
+									img_src: "https://upload.wikimedia.org/wikipedia/commons/9/94/Salad_platter.jpg",
+									img_topic: "Healthy Meals In 30 Minutes",
+									recipe_src: "#"
+									},
+									{
+									img_src: "http://d3a005dv9q91mu.cloudfront.net/uploads/2015/05/grilled-sausages_kriztofor.jpg",
+									img_topic: "Summer Cookout Meals",
+									recipe_src: "#"
+									},
+									{
+									img_src: "http://www.b4bguide.com/wp-content/uploads/2015/10/EnglishBreakfast-1200-80.jpg",
+									img_topic: "Energizing and Quick Breakfasts",
+									recipe_src: "#"
+									},
+									{
+									img_src: "http://www.belladivalifestyle.com/wp-content/uploads/2014/11/Dollarphotoclub_66436296.jpg",
+									img_topic: "Delicious Stir Frys",
+									recipe_src: "#"
+									}
+									]
+							});
+	document.getElementById("sub2").innerHTML += sub2_data;
+</script>
+</html>
