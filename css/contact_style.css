@@ -1,0 +1,19 @@
+		#contact
+		{
+			margin-left:50px;
+			margin-right:50px;
+		}
+		.header
+		{
+			font-family: 'Sriracha', cursive;
+			font-size:50px;
+			font-weight:bold;
+			color: #cccccc;
+			margin-top:40px;
+		}
+		.description
+		{
+			font-family: 'Aref Ruqaa', serif;
+			font-style:italic;
+			font-size: 20px;
+		}

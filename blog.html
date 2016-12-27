@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>Sara's Dish</title>
+	 <link rel="icon" href="#" type="image/x-icon">
+    <!-- For mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- For bootstrap, css, js and handlebars -->
+	<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/handlebars-v3.0.3.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<!-- For Social Icons -->
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<!-- For Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Sriracha" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Aref+Ruqaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Rosarivo" rel="stylesheet">
+	<!-- For external stylesheets -->
+	<link href="css/main_style.css" rel="stylesheet">
+	<link href="css/blog_style.css" rel="stylesheet">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div class="container-fluid">
+		<div id="nav">
+		</div>
+		<div id="blog">
+		</div>
+		<div id="footer">
+			<br><br>
+			<center>
+			<h4>Copyright 2016 - All rights Reserved</h4>
+			</center>
+			<br><br>
+		</div>
+	</div>
+	
+	<!-- Navbar Template -->
+	<script id="navbar-template" type="text/x-handlebars-template">
+		<nav class="nav navbar-inverse navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="home.html"><h4>{{name}}</h4></a>
+				</div>
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="{{src_option1}}"><h4>{{option1}}</h4></a></li>
+						<li><a href="{{src_option2}}"><h4>{{option2}}</h4></a></li>
+						<li class="active_now"><a href="{{src_option3}}"><h4>{{option3}}</h4></a></li>
+						<li><a href="{{src_option4}}"><h4>{{option4}}</h4></a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<br><br><br>
+	</script>
+	
+	<!-- Blog Template -->
+	<script id="blog-template" type="text/x-handlebars-template">
+		<br><br><br>
+		<div class="row">
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-7">
+			{{#each blog}}
+				<h1 class="blog_header">{{blog_heading}}</h1>
+				<br>
+				<h5 class="blog_date">{{blog_date}}</h5>
+				<hr>
+				<br>
+				<h3 class="blog_description">{{blog_description}}</h3>
+				<br><br><br>
+				<br><br><br>
+			{{/each}}
+			</div>
+			<div class="col-md-2">
+				<h1 class="topic">Author</h1>
+				<h3 class="blog_description">{{abt_author}}</h3>
+				<br><br>
+				<h1 class="topic">Archives</h1>
+				{{#each archives}}
+					<a href="{{archives_src}}>"<h3 class="blog_description">{{archive_topic}}</h3></a>
+				{{/each}}
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+	</script>
+</body>
+
+	<script type="text/javascript">
+		/* Navbar template */
+		var nav_info = document.getElementById("navbar-template").innerHTML;
+		var template = Handlebars.compile(nav_info);
+		var nav_data = template({name: "SARA'S DISH", 
+								option1: "HOME", src_option1: "home.html", 
+								option2: "ABOUT", src_option2: "about.html",
+								option3: "BLOG", src_option3: "blog.html",
+								option4: "CONTACT", src_option4: "contact.html",
+								});
+		document.getElementById("nav").innerHTML += nav_data;
+		
+		/* Blog template */
+		var blog_info = document.getElementById("blog-template").innerHTML;
+		var template = Handlebars.compile(blog_info);
+		var blog_data = template({blog: [{
+											blog_heading: "Blog Post 1",
+											blog_date: "27-12-2016",
+											blog_description: "Edit this text to create your own blog post. To edit, simply click directly on the text. Break up your text with more than one paragraph for better readability. Add images, page breaks, and links to complete your blog story."
+										},
+										{
+											blog_heading: "Blog Post 2",
+											blog_date: "2-2-2017",
+											blog_description: "Edit this text to create your own blog post. To edit, simply click directly on the text. Break up your text with more than one paragraph for better readability. Add images, page breaks, and links to complete your blog story."
+										}
+										],
+									abt_author: "Write something about yourself. Just an overview.",
+									archives: [{
+												archive_topic:"December 2016"
+												},
+												{
+												archive_topic:"February 2017"
+												}
+												]
+									});
+		document.getElementById("blog").innerHTML += blog_data;
+	</script>
+
+</html>

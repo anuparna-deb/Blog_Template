@@ -1,0 +1,25 @@
+		/* navbar styling */
+		.nav
+		{
+			margin-left:15px;
+			margin-right:15px;
+		}
+		li h4
+		{
+			font-weight:bold;
+		}
+		li h4:hover
+		{
+			color:#f2f2f2;
+		}
+		.active_now h4
+		{
+			color:white;
+		}
+		
+		/* footer styling */
+		#footer
+		{
+			background-color:#262626;
+			color:#f2f2f2;
+		}

@@ -1,0 +1,24 @@
+		#about
+		{
+			margin-left:50px;
+			margin-right:50px;
+		}
+		.blog_header
+		{
+			font-family: 'Sriracha', cursive;
+			font-size:50px;
+			font-weight:bold;
+			color: #cccccc;
+			margin-top:40px;
+		}
+		.blog_description
+		{
+			font-family: 'Aref Ruqaa', serif;
+			font-style:italic;
+			font-size: 20px;
+		}
+		.topic
+		{
+			font-family: 'Rosarivo', serif;
+			font-size:33px;
+		}
