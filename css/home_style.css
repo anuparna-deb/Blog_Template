@@ -19,6 +19,33 @@
 			font-size:43px;
 			font-weight:bold;
 		}
+		#banr
+		{
+			margin-top:60px;
+		}
+		
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		@media only screen and (max-width: 480px) 
+		{
+			.header
+			{
+				margin-left:210px;
+				margin-top:-110px;
+				font-size:30px;
+				color:white;
+			}
+			.subheader
+			{
+				margin-left:150px;
+				margin-top:-10px;
+				font-size:27px;
+			}
+			#banr
+			{
+				margin-top:45px;
+			}
+		}
+		/* ------------------------------------------------------------------------------------------------------------------------- */
 		
 		/* about styling */
 		#about
@@ -56,11 +83,50 @@
 			color:#cccccc;
 		}
 		
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		@media only screen and (max-width: 480px) 
+		{
+			#about
+			{
+				margin-top:20px;
+				margin-right:-20px;
+			}
+			.img-circle
+			{
+				height:200px;
+				width:200px;
+			}
+			.abt-header
+			{
+				font-size:25px;
+				margin-left:60px;
+			}
+			.abt-subheader
+			{	
+				font-size: 18px;
+				text-align:center;
+				width:400px;
+			}
+			button
+			{
+				width:200px; 
+				height:35px; 
+				border:1px solid black;
+				font-size:18px;
+				border-radius:3px;
+			}
+		}
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		
 		/* Sub1 styling */
 		.topic
 		{
 			font-family: 'Rosarivo', serif;
 			font-size:33px;
+		}
+		#back1
+		{
+			margin-top:-750px;
 		}
 		.recipe
 		{
@@ -104,6 +170,52 @@
 			color:white;
 		}
 		
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		@media only screen and (max-width: 480px) 
+		{
+			#sub1
+			{
+				margin-top:0px;
+			}
+			.topic
+			{
+				font-size:23px;
+			}
+			.recipe
+			{
+				width:250px;
+				height:auto;
+				display: inline-block;
+				margin:10px;
+				background-color:white;
+				padding-bottom:20px;
+				
+			}
+			.recipe img
+			{
+				margin-bottom:15px;
+				width:250px;
+				height:150px;
+			}
+			#blog
+			{
+				border-color:#33adff;
+				background-color:white;
+				color:#33adff;
+				width:250px;
+				height:50px;
+			}
+			#back
+			{
+				height:1500px;
+			}
+			#back1
+			{
+				margin-top:-1400px;
+			}
+		}
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		
 		/* Sub2 styling */
 		.sub_recipes
 		{
@@ -122,3 +234,22 @@
 		{
 			opacity:0.5;
 		}
+		
+		/* ------------------------------------------------------------------------------------------------------------------------- */
+		@media only screen and (max-width: 480px) 
+		{
+			.sub_recipes
+			{
+				width:350px;
+				height:auto;
+				display: inline-block;
+				margin:10px;
+				background-color:white;
+				padding-bottom:30px;
+			}
+			.sub_recipes img
+			{
+				width:350px;
+			}
+		}
+		/* ------------------------------------------------------------------------------------------------------------------------- */
