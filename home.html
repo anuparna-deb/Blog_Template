@@ -23,6 +23,7 @@
 	<!-- For external stylesheets -->
 	<link href="css/main_style.css" rel="stylesheet">
 	<link href="css/home_style.css" rel="stylesheet">
+	
 </head>
 <body>
 	<div class="container-fluid">
@@ -46,17 +47,17 @@
 	</div>
 	<!-- Navbar Template -->
 	<script id="navbar-template" type="text/x-handlebars-template">
-		<nav class="nav navbar-inverse navbar-fixed-top">
+		<nav class="nav navbar-inverse navbar-fixed-top" id="one">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar" id="col-tog">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="home.html"><h4>{{name}}</h4></a>
 				</div>
-				<div class="collapse navbar-collapse" id="myNavbar">
+				<div class="collapse navbar-collapse" id="Navbar">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="active_now"><a href="{{src_option1}}"><h4>{{option1}}</h4></a></li>
 						<li><a href="{{src_option2}}"><h4>{{option2}}</h4></a></li>
@@ -66,12 +67,11 @@
 				</div>
 			</div>
 		</nav>
-		<br><br><br>
 	</script>
 	
 	<!-- Banner Template -->
 	<script id="banner-template" type="text/x-handlebars-template">
-		<img src="{{banner_src}}" alt="" width="100%" height="" />
+		<img src="{{banner_src}}" alt="" width="100%" height="" id="banr" />
 		<h1 class="header">{{heading}}</h1>
 		<h3 class="subheader">{{subheading}}</h3>
 		<br><br><br><br>
@@ -107,9 +107,9 @@
 	
 	<!-- sub1 template -->
 	<script id="sub1-template" type="text/x-handlebars-template">
-		<img src="{{sub1_src}}" alt="" width="100%" height="" />
+		<img src="{{sub1_src}}" id="back" alt="" width="100%" height="" />
 		<center>
-		<div style="margin-top:-750px;">
+		 <div id="back1">
 			<div id="recipe1"  class="recipe">
 				<img src="{{recipe1_src}}" alt="salad" height="250px" width="350px" />
 				<h5> RECIPE </h5>
